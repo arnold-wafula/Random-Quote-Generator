@@ -1,3 +1,26 @@
-function display() {
-    document.getElementById("hd1").innerHTML = "Displayed using Vanilla js";
+let quotes = [
+    "The only thing that matters is that you have a good life.",
+    "Life is what happens to you while you're busy making other plans.",
+    "When music hits you, you feel no pain.",
+    "Genius is one percent inspiration and ninety-nine percent perspiration.",
+    "You can observe a lot just by watching.",
+    "A house divided against itself cannot stand.",
+    "Difficulties increase the nearer we get to the goal."
+];
+
+let authors = [
+    "Arnold Wafula",
+    "Andy Maala",
+    "Bob Marley",
+    "Thomas Edison",
+    "Yogi Berra",
+    "Abraham Lincoln",
+    "Johann Wolfgang von Goethe"
+];
+
+function randomQuote() {
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+    
+    document.querySelector('.quote').innerHTML = quotes[randomIndex];
+    document.querySelector('.author').innerHTML = "- " + authors[randomIndex];
 }
